@@ -1,0 +1,208 @@
+--------------------------------------------------------
+--  File created - Tuesday-December-02-2014   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table BATCHES
+--------------------------------------------------------
+
+  CREATE TABLE "N01004445"."BATCHES" 
+   (	"BCODE" NUMBER(3,0), 
+	"CCODE" VARCHAR2(5 BYTE), 
+	"STDATE" DATE
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 65536 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "F14J2EEMS" ;
+--------------------------------------------------------
+--  DDL for Table COURSES
+--------------------------------------------------------
+
+  CREATE TABLE "N01004445"."COURSES" 
+   (	"CCODE" VARCHAR2(5 BYTE), 
+	"CNAME" VARCHAR2(30 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 65536 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "F14J2EEMS" ;
+--------------------------------------------------------
+--  DDL for Table EXAMS
+--------------------------------------------------------
+
+  CREATE TABLE "N01004445"."EXAMS" 
+   (	"EXAMID" NUMBER(5,0), 
+	"BCODE" NUMBER(3,0), 
+	"ROLLNO" NUMBER(3,0), 
+	"MARKS" NUMBER(2,0), 
+	"DEXAM" DATE
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "F14J2EEMS" ;
+--------------------------------------------------------
+--  DDL for Table PASSWORD
+--------------------------------------------------------
+
+  CREATE TABLE "N01004445"."PASSWORD" 
+   (	"PWD" VARCHAR2(10 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 65536 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "F14J2EEMS" ;
+--------------------------------------------------------
+--  DDL for Table QUESTIONS
+--------------------------------------------------------
+
+  CREATE TABLE "N01004445"."QUESTIONS" 
+   (	"QID" NUMBER(5,0), 
+	"CCODE" VARCHAR2(5 BYTE), 
+	"QUESTION" VARCHAR2(1000 BYTE), 
+	"ANS1" VARCHAR2(1000 BYTE), 
+	"ANS2" VARCHAR2(1000 BYTE), 
+	"ANS3" VARCHAR2(1000 BYTE), 
+	"CANS" VARCHAR2(2000 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 65536 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "F14J2EEMS" ;
+--------------------------------------------------------
+--  DDL for Table STUDENTS
+--------------------------------------------------------
+
+  CREATE TABLE "N01004445"."STUDENTS" 
+   (	"BCODE" NUMBER(3,0), 
+	"ROLLNO" NUMBER(3,0), 
+	"SNAME" VARCHAR2(20 BYTE), 
+	"PWD" VARCHAR2(10 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 65536 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "F14J2EEMS" ;
+REM INSERTING into N01004445.BATCHES
+SET DEFINE OFF;
+Insert into N01004445.BATCHES (BCODE,CCODE,STDATE) values (205,'Eng',to_date('11-NOV-14','DD-MON-RR'));
+Insert into N01004445.BATCHES (BCODE,CCODE,STDATE) values (201,'Java',to_date('02-DEC-14','DD-MON-RR'));
+Insert into N01004445.BATCHES (BCODE,CCODE,STDATE) values (204,'Eng',to_date('19-NOV-14','DD-MON-RR'));
+Insert into N01004445.BATCHES (BCODE,CCODE,STDATE) values (206,'Eng',to_date('01-NOV-14','DD-MON-RR'));
+Insert into N01004445.BATCHES (BCODE,CCODE,STDATE) values (207,'FRN',to_date('11-NOV-14','DD-MON-RR'));
+Insert into N01004445.BATCHES (BCODE,CCODE,STDATE) values (202,'101',to_date('25-NOV-14','DD-MON-RR'));
+Insert into N01004445.BATCHES (BCODE,CCODE,STDATE) values (203,'104',to_date('26-NOV-14','DD-MON-RR'));
+REM INSERTING into N01004445.COURSES
+SET DEFINE OFF;
+Insert into N01004445.COURSES (CCODE,CNAME) values ('104','PM');
+Insert into N01004445.COURSES (CCODE,CNAME) values ('105','Carrer connections');
+Insert into N01004445.COURSES (CCODE,CNAME) values ('FRN','French');
+Insert into N01004445.COURSES (CCODE,CNAME) values ('102','PHP');
+Insert into N01004445.COURSES (CCODE,CNAME) values ('Eng','english');
+Insert into N01004445.COURSES (CCODE,CNAME) values ('Java',null);
+Insert into N01004445.COURSES (CCODE,CNAME) values ('101','Servlets');
+REM INSERTING into N01004445.EXAMS
+SET DEFINE OFF;
+REM INSERTING into N01004445.PASSWORD
+SET DEFINE OFF;
+Insert into N01004445.PASSWORD (PWD) values ('exam');
+REM INSERTING into N01004445.QUESTIONS
+SET DEFINE OFF;
+Insert into N01004445.QUESTIONS (QID,CCODE,QUESTION,ANS1,ANS2,ANS3,CANS) values (1,'101','Thinnest phone on planet by?','Gionee','Xiomi','Apple','Gionee');
+Insert into N01004445.QUESTIONS (QID,CCODE,QUESTION,ANS1,ANS2,ANS3,CANS) values (5,'FRN','What is French?
+','language','java','english','language');
+Insert into N01004445.QUESTIONS (QID,CCODE,QUESTION,ANS1,ANS2,ANS3,CANS) values (6,'101','what is java?','programming lang','scripting','c','programming lang');
+Insert into N01004445.QUESTIONS (QID,CCODE,QUESTION,ANS1,ANS2,ANS3,CANS) values (4,'101','2+2','4','44','66','4');
+Insert into N01004445.QUESTIONS (QID,CCODE,QUESTION,ANS1,ANS2,ANS3,CANS) values (3,'101','Android one is manufactured by?','Micormax','Intex','Xiomi','Micromax');
+REM INSERTING into N01004445.STUDENTS
+SET DEFINE OFF;
+Insert into N01004445.STUDENTS (BCODE,ROLLNO,SNAME,PWD) values (205,1,'manas2','sa');
+Insert into N01004445.STUDENTS (BCODE,ROLLNO,SNAME,PWD) values (201,2,'japnam','sa');
+Insert into N01004445.STUDENTS (BCODE,ROLLNO,SNAME,PWD) values (201,3,'abc','abc');
+Insert into N01004445.STUDENTS (BCODE,ROLLNO,SNAME,PWD) values (207,1,'Aashish','Vig');
+Insert into N01004445.STUDENTS (BCODE,ROLLNO,SNAME,PWD) values (202,2,'def','def');
+Insert into N01004445.STUDENTS (BCODE,ROLLNO,SNAME,PWD) values (201,1,'aashish','vig');
+Insert into N01004445.STUDENTS (BCODE,ROLLNO,SNAME,PWD) values (202,1,'abc','abc');
+Insert into N01004445.STUDENTS (BCODE,ROLLNO,SNAME,PWD) values (203,1,'aashish','vig');
+Insert into N01004445.STUDENTS (BCODE,ROLLNO,SNAME,PWD) values (203,2,'japnam','singh');
+Insert into N01004445.STUDENTS (BCODE,ROLLNO,SNAME,PWD) values (206,1,'manas','manas');
+--------------------------------------------------------
+--  Constraints for Table COURSES
+--------------------------------------------------------
+
+  ALTER TABLE "N01004445"."COURSES" ADD PRIMARY KEY ("CCODE")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 65536 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "F14J2EEMS"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table EXAMS
+--------------------------------------------------------
+
+  ALTER TABLE "N01004445"."EXAMS" ADD PRIMARY KEY ("EXAMID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  TABLESPACE "F14J2EEMS"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table BATCHES
+--------------------------------------------------------
+
+  ALTER TABLE "N01004445"."BATCHES" ADD PRIMARY KEY ("BCODE")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 65536 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "F14J2EEMS"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table STUDENTS
+--------------------------------------------------------
+
+  ALTER TABLE "N01004445"."STUDENTS" ADD PRIMARY KEY ("BCODE", "ROLLNO")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 65536 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "F14J2EEMS"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table QUESTIONS
+--------------------------------------------------------
+
+  ALTER TABLE "N01004445"."QUESTIONS" ADD PRIMARY KEY ("QID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 65536 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "F14J2EEMS"  ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table BATCHES
+--------------------------------------------------------
+
+  ALTER TABLE "N01004445"."BATCHES" ADD FOREIGN KEY ("CCODE")
+	  REFERENCES "N01004445"."COURSES" ("CCODE") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table EXAMS
+--------------------------------------------------------
+
+  ALTER TABLE "N01004445"."EXAMS" ADD FOREIGN KEY ("BCODE", "ROLLNO")
+	  REFERENCES "N01004445"."STUDENTS" ("BCODE", "ROLLNO") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table QUESTIONS
+--------------------------------------------------------
+
+  ALTER TABLE "N01004445"."QUESTIONS" ADD FOREIGN KEY ("CCODE")
+	  REFERENCES "N01004445"."COURSES" ("CCODE") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table STUDENTS
+--------------------------------------------------------
+
+  ALTER TABLE "N01004445"."STUDENTS" ADD FOREIGN KEY ("BCODE")
+	  REFERENCES "N01004445"."BATCHES" ("BCODE") ENABLE;
